@@ -12,9 +12,17 @@ View your app in AI Studio: https://ai.studio/apps/temp/1
 
 **Prerequisites:**  Node.js
 
-
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Deploy to GitHub Pages
+
+1. Build the static assets (the Vite build now writes to the `docs/` folder):
+   `npm run build`
+2. Commit and push the updated `docs/` directory to the branch que o GitHub Pages usa (por exemplo, `main`).
+3. Em **Settings → Pages**, escolha a mesma branch e selecione a pasta `/docs` para publicar.
+
+Com isso o conteúdo servido pelo GitHub Pages será o mesmo gerado localmente pelo Vite, evitando a tela em branco.
